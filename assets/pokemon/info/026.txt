@@ -1,0 +1,6 @@
+026
+Raichu
+Electric
+Ground
+Pikachu,Raichu
+Its tail discharges electricity into the ground, protecting it from getting shocked.

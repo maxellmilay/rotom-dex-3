@@ -1,0 +1,6 @@
+130
+Gyarados
+Water,Flying
+Electric,Rock
+Magikarp,Gyarados
+Once it appears, it goes on a rampage. It remains enraged until it demolishes everything around it.

@@ -1,0 +1,6 @@
+084
+Doduo
+Normal,Flying
+Electric,Ice,Rock
+Doduo,Dodrio
+Doduo's two heads never sleep at the same time. Its twoheads take turns sleeping, so one head can always keepwatch for enemies while the other one sleeps.

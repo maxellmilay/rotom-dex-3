@@ -1,0 +1,6 @@
+065
+Alakazam
+Psychic
+Bug,Ghost,Dark
+Abra,Kadabra,Alakazam
+Alakazam uses its psychic powers to make the spoons it carries. Each spoon is an original that there's only one of in the whole world.

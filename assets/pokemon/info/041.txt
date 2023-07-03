@@ -1,0 +1,6 @@
+041
+Zubat
+Poison,Flying
+Electric,Ice,Psychic,Rock
+Zubat,Golbat
+It has no eyeballs, so it can't see. It checks its surroundings via the ultrasonic waves it emits from its mouth.

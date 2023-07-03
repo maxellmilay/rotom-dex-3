@@ -1,0 +1,6 @@
+080
+Slowbro
+Water,Psychic
+Grass,Electric,Bug,Ghost,Dark
+Slowpoke,Slowbro
+When a Slowpoke went hunting in the sea, its tail was bitten by a Shellder. That made it evolve into Slowbro.

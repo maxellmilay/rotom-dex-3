@@ -1,0 +1,6 @@
+090
+Shellder
+Water
+Grass,Electric
+Shellder,Cloyster
+It is encased in a shell that is harder than diamond. Inside, however, it is surprisingly tender.

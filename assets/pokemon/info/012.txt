@@ -1,0 +1,6 @@
+012
+Butterfree
+Bug,Flying
+Fire,Electric,Ice,Flying,Rock
+Caterpie,Metapod,Butterfree
+In battle, it flaps its wings at great speed to release highly toxic dust into the air.

@@ -1,0 +1,6 @@
+111
+Rhyhorn
+Ground,Rock
+Water,Grass,Ice,Fighting,Ground,Steel
+Rhyhorn,Rhydon
+Strong, but not too bright, this Pokémon can shatter even a skyscraper with its charging tackles.

@@ -1,0 +1,6 @@
+048
+Venonat
+Bug,Poison
+Fire,Flying,Psychic,Rock
+Venonat,Venomoth
+Poison oozes from all over its body. It catches small bug Pokémon at night that are attracted by light.

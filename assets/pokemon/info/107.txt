@@ -1,0 +1,6 @@
+107
+Hitmonchan
+Fighting
+Flying,Psychic,Fairy
+Hitmonlee
+Its punches slice the air. They are launched at such high speed, even a slight graze could cause a burn.

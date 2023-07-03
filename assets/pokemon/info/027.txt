@@ -1,0 +1,6 @@
+027
+Sandshrew
+Ground
+Water,Grass,Ice
+Sandshrew,Sandslash
+It lives in areas of limited rainfall. When danger approaches, it curls up into a ball to protect its soft stomach.

@@ -1,0 +1,6 @@
+064
+Kadabra
+Psychic
+Bug,Ghost,Dark
+Abra,Kadabra,Alakazam
+It stares at a silver spoon to amplify its psychic powers before it lets loose. Apparently, gold spoons are no good.

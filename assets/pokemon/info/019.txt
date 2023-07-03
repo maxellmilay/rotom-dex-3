@@ -1,0 +1,6 @@
+019
+Rattata
+Normal
+Fighting
+Rattata,Raticate
+Its incisors grow continuously throughout its life. If its incisors get too long, this Pokémon becomes unable to eat, and it starves to death.

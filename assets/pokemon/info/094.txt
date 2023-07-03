@@ -1,0 +1,6 @@
+094
+Gengar
+Ghost,Poison
+Ground,Psychic,Ghost,Dark
+Gastly,Haunter,Gengar
+To steal the life of its target, it slips into the prey’s shadow and silently waits for an opportunity.

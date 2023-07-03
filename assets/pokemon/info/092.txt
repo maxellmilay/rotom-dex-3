@@ -1,0 +1,6 @@
+092
+Gastly
+Ghost,Poison
+Ground,Psychic,Ghost,Dark
+Gastly,Haunter,Gengar
+It wraps its opponent in its gas-like body, slowly weakening its prey by poisoning it through the skin.

@@ -1,0 +1,6 @@
+044
+Gloom
+Grass,Poison
+Fire,Ice,Flying,Psychic
+Oddish,Gloom,Vileplume
+Its pistils exude an incredibly foul odor. The horrid stench can cause fainting at a distance of 1.25 miles.

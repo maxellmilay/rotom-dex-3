@@ -1,0 +1,6 @@
+133
+Eevee
+Normal
+Fighting
+Flareon,Vaporeon,Jolteon
+Its ability to evolve into many forms allows it to adapt smoothly and perfectly to any environment.

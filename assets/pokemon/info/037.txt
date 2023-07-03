@@ -1,0 +1,6 @@
+037
+Vulpix
+Fire
+Water,Ground,Rock
+Vulpix,Ninetales
+While young, it has six gorgeous tails. When it grows, several new tails are sprouted.

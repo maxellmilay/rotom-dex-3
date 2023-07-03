@@ -1,0 +1,6 @@
+039
+Jigglypuff
+Normal,Fairy
+Poison,Steel
+Jigglypuff,Wigglytuff
+When its huge eyes waver, it sings a mysteriously soothing melody that lulls its enemies to sleep.

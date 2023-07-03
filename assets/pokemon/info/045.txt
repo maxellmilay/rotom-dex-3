@@ -1,0 +1,6 @@
+045
+Vileplume
+Grass,Poison
+Fire,Ice,Flying,Psychic
+Oddish,Gloom,Vileplume
+It has the world’s largest petals. With every step, the petals shake out heavy clouds of toxic pollen.

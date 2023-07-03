@@ -1,0 +1,6 @@
+070
+Weepinbell
+Grass,Poison
+Fire,Ice,Flying,Psychic
+Bellsprout,Weepinbell,Victreebel
+Weepinbell has a large hook on its rear end. At night, thePokémon hooks on to a tree branch and goes to sleep. If it moves around in its sleep, it may wake up to find itselfon the ground.

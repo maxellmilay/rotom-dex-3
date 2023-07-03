@@ -1,0 +1,6 @@
+015
+Beedrill
+Bug, Poison
+Fire,Flying,Psychic,Rock
+Weedle,Kakuna,Beedrill
+Beedrill is extremely territorial. No one should ever approachits nest—this is for their own safety. If angered, they will attackin a furious swarm.

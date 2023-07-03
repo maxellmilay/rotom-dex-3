@@ -1,0 +1,6 @@
+028
+Sandslash
+Ground
+Water,Grass,Ice
+Sandshrew,Sandslash
+Its claws and horns often break off. The broken claws and horns can be used to carve plows for tilling farm fields.

@@ -1,0 +1,6 @@
+016
+Pidgey
+Normal, Flying
+Electric,Ice,Rock
+Pidgey,Pidgeotto,Pidgeot
+Pidgey has an extremely sharp sense of direction. It is capableof unerringly returning home to its nest, however far it may beremoved from its familiar surroundings.

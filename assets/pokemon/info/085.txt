@@ -1,0 +1,6 @@
+085
+Dodrio
+Normal,Flying
+Electric,Ice,Rock
+Doduo,Dodrio
+Watch out if Dodrio's three heads are looking in three separatedirections. It's a sure sign that it is on its guard. Don't go nearthis Pokémon if it's being wary—it may decide to peck you.

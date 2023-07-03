@@ -1,0 +1,6 @@
+025
+Pikachu
+Electric
+Ground
+Pikachu,Raichu
+When it is angered, it immediately discharges the energy stored in the pouches in its cheeks.

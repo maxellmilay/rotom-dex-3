@@ -1,0 +1,6 @@
+069
+Bellsprout
+Grass,Poison
+Fire,Ice,Flying,Psychic
+Bellsprout,Weepinbell,Victreebel
+Bellsprout's thin and flexible body lets it bend and sway toavoid any attack, however strong it may be. From its mouth, this Pokémon spits a corrosive fluid that melts even iron.

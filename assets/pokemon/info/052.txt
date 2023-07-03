@@ -1,0 +1,6 @@
+052
+Meowth
+Normal
+Fighting
+Meowth,Persian
+All it does is sleep during the daytime. At night, it patrols its territory with its eyes aglow.

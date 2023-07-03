@@ -1,0 +1,6 @@
+038
+Ninetales
+Fire
+Water,Ground,Rock
+Vulpix,Ninetales
+It is said to live 1,000 years, and each of its tails is loaded with supernatural powers.

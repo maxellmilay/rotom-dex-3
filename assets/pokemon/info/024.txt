@@ -1,0 +1,6 @@
+024
+Arbok
+Poison
+Ground,Psychic
+Ekans,Arbok
+The latest research has determined that there are over 20 possible arrangements of the patterns on its stomach.

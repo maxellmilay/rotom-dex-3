@@ -1,0 +1,6 @@
+008
+Wartortle
+Water
+Grass,Electric
+Squirtle,Wartortle,Blastoise
+Its tail is large and covered with a rich, thick fur. The tailbecomes increasingly deeper in color as Wartortle ages. The scratches on its shell are evidence of this Pokémon'stoughness as a battler.

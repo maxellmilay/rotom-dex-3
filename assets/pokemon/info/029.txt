@@ -1,0 +1,6 @@
+029
+NidoranF
+Poison
+Ground,Psychic
+NidoranF,Nidorina,Nidoqueen
+NidoranF has barbs that secrete a powerful poison. They are thought to have developed as protection forthis small-bodied Pokémon. When enraged, it releasesa horrible toxin from its horn.

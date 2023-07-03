@@ -1,0 +1,6 @@
+120
+Staryu
+Water
+Grass,Electric
+Staryu,Starmie
+In many places, there are folktales of stardust falling into the ocean and becoming Staryu.

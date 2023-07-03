@@ -1,0 +1,6 @@
+102
+Exeggcute
+Grass,Psychic
+Fire,Ice,Poison,Flying,Bug,Ghost
+Exeggcute,Exeggutor
+Six of them form a single Pokémon. Should one of the six be lost, the next morning there will once more be six.

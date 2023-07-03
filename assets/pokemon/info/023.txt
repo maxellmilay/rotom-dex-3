@@ -1,0 +1,6 @@
+023
+Ekans
+Poison
+Ground,Psychic
+Ekans,Arbok
+By dislocating its jaw, it can swallow prey larger than itself. After a meal, it curls up and rests.

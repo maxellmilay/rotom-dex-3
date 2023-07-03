@@ -1,0 +1,6 @@
+018
+Pidgeot
+Normal,Flying
+Electric,Ice,Rock
+Pidgey,Pidgeotto,Pidgeot
+This Pokémon has a dazzling plumage of beautifullyglossy feathers. Many Trainers are captivated by thestriking beauty of the feathers on its head, compellingthem to choose Pidgeot as their Pokémon.

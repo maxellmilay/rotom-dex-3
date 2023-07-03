@@ -1,0 +1,6 @@
+017
+Pidgeotto
+Normal,Flying
+Electric,Ice,Rock
+Pidgey,Pidgeotto,Pidgeot
+Pidgeotto claims a large area as its own territory. This Pokémon flies around, patrolling its living space. If its territory is violated, it shows no mercy in thoroughlypunishing the foe with its sharp claws.

@@ -1,0 +1,6 @@
+081
+Magnemite
+Electric,Steel
+Fire,Fighting,Ground
+Magnemite,Magneton
+The electromagnetic waves emitted by the units at the sides of its head expel antigravity, which allows it to float.

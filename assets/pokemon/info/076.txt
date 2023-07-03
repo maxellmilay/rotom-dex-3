@@ -1,0 +1,6 @@
+076
+Golem
+Rock,Ground
+Water,Grass,Ice,Fighting,Ground,Steel
+Geodude,Graveler,Golem
+When Golem grow old, they stop shedding their shells. Those that have lived a long, long time have shells green with moss.

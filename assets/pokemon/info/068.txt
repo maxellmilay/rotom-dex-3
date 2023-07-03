@@ -1,0 +1,6 @@
+068
+Machamp
+Fighting
+Flying,Psychic,Fairy
+Machop,Machoke,Machamp
+It quickly swings its four arms to rock its opponents with ceaseless punches and chops from all angles.

@@ -1,0 +1,6 @@
+142
+Aerodactyl
+Rock,Flying
+Water,Electric,Ice,Rock,Steel
+Aerodactyl
+Restored from DNA found in amber, this Pokémon exhibited ferocity that was greater than expected. Some casualties resulted.

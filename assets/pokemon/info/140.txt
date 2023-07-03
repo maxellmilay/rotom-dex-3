@@ -1,0 +1,6 @@
+140
+Kabuto
+Rock,Water
+Grass,Electric,Fighting,Ground
+Kabuto,Kabutops
+This Pokémon thrived 300 million years ago. It's said that living specimens can still be seen in a certain region—a rare sight.

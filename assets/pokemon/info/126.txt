@@ -1,0 +1,6 @@
+126
+Magmar
+Fire
+Water,Ground,Rock
+Magmar
+Its entire body is burning. When it breathes, the temperature rises. When it sneezes, flames shoot out!

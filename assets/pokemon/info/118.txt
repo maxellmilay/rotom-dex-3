@@ -1,0 +1,6 @@
+118
+Goldeen
+Water
+Grass,Electric
+Goldeen,Seaking
+Its dorsal, pectoral, and tail fins wave elegantly in water. That is why it is known as the Water Dancer.

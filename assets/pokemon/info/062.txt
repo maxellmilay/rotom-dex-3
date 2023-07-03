@@ -1,0 +1,6 @@
+062
+Poliwrath
+Water,Fighting
+Grass,Electric,Flying,Psychic,Fairy
+Poliwag,Poliwhirl,Poliwrath
+It's quite a gifted swimmer, even among Water-type Pokémon, but it normally spends its time on land.

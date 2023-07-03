@@ -1,0 +1,6 @@
+049
+Venomoth
+Bug,Poison
+Fire,Flying,Psychic,Rock
+Venonat,Venomoth
+The wings are covered with dustlike scales. Every time it flaps its wings, it looses highly toxic dust.

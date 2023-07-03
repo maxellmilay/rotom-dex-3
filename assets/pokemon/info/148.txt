@@ -1,0 +1,6 @@
+148
+Dragonair
+Dragon
+Ice,Dragon,Fairy
+Dratini,Dragonair,Dragonite
+They say that if it emits an aura from its whole body, the weather will begin to change instantly.

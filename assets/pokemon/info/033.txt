@@ -1,0 +1,6 @@
+033
+Nidorino
+Poison
+Ground,Psychic
+NidoranM,Nidorino,Nidoking
+Nidorino has a horn that is harder than a diamond. If it sensesa hostile presence, all the barbs on its back bristle up at once, and it challenges the foe with all its might.

@@ -1,0 +1,6 @@
+129
+Magikarp
+Water
+Grass,Electric
+Magikarp,Gyarados
+An underpowered, pathetic Pokémon. It may jump high on rare occasions but never more than seven feet.

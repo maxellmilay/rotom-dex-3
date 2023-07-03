@@ -1,0 +1,6 @@
+093
+Haunter
+Ghost,Poison
+Ground,Psychic,Ghost,Dark
+Gastly,Haunter,Gengar
+It likes to lurk in the dark and tap shoulders with a gaseous hand. Its touch causes endless shuddering.

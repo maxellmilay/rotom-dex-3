@@ -1,0 +1,6 @@
+087
+Dewgong
+Water,Ice
+Grass,Electric,Fighting,Rock
+Seel,Dewgong
+It swims through the ocean at a speed of eight knots, searching for Pokémon that will become its prey. It's especially fond of Wishiwashi.

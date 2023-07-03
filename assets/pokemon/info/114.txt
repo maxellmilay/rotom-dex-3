@@ -1,0 +1,6 @@
+114
+Tangela
+Grass
+Fire,Ice,Poison,Flying,Bug
+Tangela
+Tangela's vines snap off easily if they are grabbed. This happens without pain, allowing it to make a quickgetaway. The lost vines are replaced by newly grown vines thevery next day.

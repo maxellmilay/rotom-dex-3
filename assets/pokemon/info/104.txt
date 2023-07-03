@@ -1,0 +1,6 @@
+104
+Cubone
+Ground
+Water,Grass,Ice
+Cubone,Marowak
+At night, it weeps loudly for its dead mother, but those cries only attract its natural enemy—Mandibuzz.

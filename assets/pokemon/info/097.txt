@@ -1,0 +1,6 @@
+097
+Hypno
+Psychic
+Bug,Ghost,Dark
+Drowzee,Hypno
+When it locks eyes with an enemy, it will use a mix of psi moves, such as Hypnosis and Confusion.

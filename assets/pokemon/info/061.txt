@@ -1,0 +1,6 @@
+061
+Poliwhirl
+Water
+Grass,Electric
+Poliwag,Poliwhirl,Poliwrath
+Although it has become capable of living on land, it spends its time in the water, where its prey, fish Pokémon, are plentiful.

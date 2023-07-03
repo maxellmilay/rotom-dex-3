@@ -1,0 +1,6 @@
+054
+Psyduck
+Water
+Grass,Electric
+Psyduck,Golduck
+It is constantly wracked by a headache. When the headache turns intense, it begins using mysterious powers.

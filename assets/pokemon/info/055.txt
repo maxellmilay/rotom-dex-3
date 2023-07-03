@@ -1,0 +1,6 @@
+055
+Golduck
+Water
+Grass,Electric
+Psyduck,Golduck
+When it swims at full speed using its long, webbed limbs, its forehead somehow begins to glow.

@@ -1,0 +1,6 @@
+007
+Squirtle
+Water
+Grass,Electric
+Squirtle,Wartortle,Blastoise
+Squirtle's shell is not merely used for protection. The shell's rounded shape and the grooves on its surfacehelp minimize resistance in water, enabling this Pokémonto swim at high speeds.

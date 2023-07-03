@@ -1,0 +1,6 @@
+004
+Charmeleon
+Fire
+Water,Ground,Rock
+Charmander,Charmeleon,Charizard
+It has a barbaric nature. In battle, it whips its fiery tail around and slashes away with sharp claws.

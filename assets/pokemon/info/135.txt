@@ -1,0 +1,6 @@
+135
+Jolteon
+Electric
+Ground
+Eevee,Jolteon
+It concentrates the weak electric charges emitted by its cells and launches wicked lightning bolts.

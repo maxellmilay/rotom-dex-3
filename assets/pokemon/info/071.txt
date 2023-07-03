@@ -1,0 +1,6 @@
+071
+Victreebel
+Grass,Poison
+Fire,Ice,Flying,Psychic
+Bellsprout,Weepinbell,Victreebel
+Victreebel has a long vine that extends from its head. This vine is waved and flicked about as if it were an animal toattract prey. When an unsuspecting prey draws near, thisPokémon swallows it whole.

@@ -1,0 +1,6 @@
+082
+Magneton
+Electric,Steel
+Fire,Fighting,Ground
+Magnemite,Magneton
+Three Magnemite are linked by a strong magnetic force. Earaches will occur if you get too close.

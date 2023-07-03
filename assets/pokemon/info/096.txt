@@ -1,0 +1,6 @@
+096
+Drowzee
+Psychic
+Bug,Ghost,Dark
+Drowzee,Hypno
+It remembers every dream it eats. It rarely eats the dreams of adults because children’s are much tastier.

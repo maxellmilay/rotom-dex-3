@@ -1,0 +1,6 @@
+058
+Growlithe
+Fire
+Water,Ground,Rock
+Growlithe,Arcanine
+It has a brave and trustworthy nature. It fearlessly stands up to bigger and stronger foes.

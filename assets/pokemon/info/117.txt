@@ -1,0 +1,6 @@
+117
+Seadra
+Water
+Grass,Electric
+Horsea,Seadra
+Seadra sleeps after wriggling itself between the branches ofcoral. Those trying to harvest coral are occasionally stung bythis Pokémon's poison barbs if they fail to notice it.

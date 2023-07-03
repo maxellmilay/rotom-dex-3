@@ -1,0 +1,6 @@
+059
+Arcanine
+Fire
+Water,Ground,Rock
+Growlithe,Arcanine
+An ancient picture scroll shows that people were captivated by its movement as it ran through prairies.

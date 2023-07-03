@@ -1,0 +1,6 @@
+138
+Omanyte
+Rock, Water
+Grass,Electric,Fighting,Ground
+Omanyte,Omastar
+Omanyte lived in the seas of antiquity. Its fossils have been found bearing bite marks from Archeops, so apparently Archeops preyed on it.

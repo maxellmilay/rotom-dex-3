@@ -1,0 +1,6 @@
+083
+Farfetch'd
+Normal,Flying
+Electric,Ice,Rock
+
+The stalk this Pokémon carries in its wings serves as a sword to cut down opponents. In a dire situation, the stalk can also serve as food.

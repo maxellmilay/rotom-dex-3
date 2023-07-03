@@ -1,0 +1,6 @@
+063
+Abra
+Psychic
+Bug,Ghost,Dark
+Abra,Kadabra,Alakazam
+It uses various psychic powers even while it's sleeping, so you can't tell whether or not it's awake.

@@ -1,0 +1,6 @@
+123
+Scyther
+Bug,Flying
+Fire,Electric,Ice,Flying,Rock
+Scyther
+It slashes through grass with its sharp scythes, moving too fast for the human eye to track.

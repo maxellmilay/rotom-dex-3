@@ -1,0 +1,6 @@
+141
+Kabutops
+Rock,Water
+Grass,Electric,Fighting,Ground
+Kabuto,Kabutops
+Its body had begun to change so it could function on land. But it didn't adapt in time and went extinct.

@@ -1,0 +1,6 @@
+147
+Dratini
+Dragon
+Ice,Dragon,Fairy
+Dratini,Dragonair,Dragonite
+It sheds many layers of skin as it grows larger. During this process, it is protected by a rapid waterfall.

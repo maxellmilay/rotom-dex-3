@@ -1,0 +1,6 @@
+134
+Vaporeon
+Water
+Grass,Electric
+Eevee,Vaporeon
+It lives close to water. Its long tail is ridged with a fin, which is often mistaken for a mermaid’s.

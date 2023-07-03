@@ -1,0 +1,6 @@
+110
+Weezing
+Poison
+Ground,Psychic
+Koffing,Weezing
+It mixes gases between its two bodies. It’s said that these Pokémon were seen all over the Galar region back in the day.

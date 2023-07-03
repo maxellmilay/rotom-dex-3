@@ -1,0 +1,6 @@
+112
+Rhydon
+Ground,Rock
+Water,Grass,Ice,Fighting,Ground,Steel
+Rhyhorn, hydon
+It begins walking on its hind legs after evolution. It can punch holes through boulders with its horn.

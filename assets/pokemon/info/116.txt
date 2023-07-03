@@ -1,0 +1,6 @@
+116
+Horsea
+Water
+Grass,Electric
+Horsea,Seadra
+Horsea eats small insects and moss off of rocks. If the oceancurrent turns fast, this Pokémon anchors itself by wrapping itstail around rocks or coral to prevent being washed away.

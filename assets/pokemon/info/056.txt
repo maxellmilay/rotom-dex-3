@@ -1,0 +1,6 @@
+056
+Mankey
+Fighting
+Flying,Psychic,Fairy
+Mankey,Primeape
+It lives in groups in the treetops. If it loses sight of its group, it becomes infuriated by its loneliness.

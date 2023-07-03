@@ -1,0 +1,6 @@
+100
+Voltorb
+Electric
+Ground
+Voltorb,Electrode
+It rolls to move. If the ground is uneven, a sudden jolt from hitting a bump can cause it to explode.

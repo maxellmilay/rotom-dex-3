@@ -1,0 +1,6 @@
+075
+Graveler
+Rock,Ground
+Water,Grass,Ice,Fighting,Ground,Steel
+Geodude,Graveler,Golem
+It climbs up cliffs as it heads toward the peak of a mountain. As soon as it reaches the summit, it rolls back down the way it came.

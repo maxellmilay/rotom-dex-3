@@ -1,0 +1,6 @@
+098
+Krabby
+Water
+Grass,Electric
+Krabby,Kingler
+It can be found near the sea. The large pincers grow back if they are torn out of their sockets.

@@ -1,0 +1,6 @@
+047
+Parasect
+Bug,Grass
+Fire,Ice,Poison,Flying,Bug,Rock
+Paras,Parasect
+The bug is mostly dead, with the mushroom on its back having become the main body. If the mushroom comes off, the bug stops moving.

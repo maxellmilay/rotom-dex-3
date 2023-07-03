@@ -1,0 +1,6 @@
+139
+Omastar
+Rock, Water
+Grass,Electric,Fighting,Ground
+Omanyte,Omastar
+Its heavy shell is thought to be the reason this ancient Pokémon died out. It's apparently a distant ancestor of Octillery.

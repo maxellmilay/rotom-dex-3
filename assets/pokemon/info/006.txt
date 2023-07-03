@@ -1,0 +1,6 @@
+006
+Charizard
+Fire,Flying
+Water,Electric,Rock
+Charmander,Charmeleon,Charizard
+It spits fire that is hot enough to melt boulders. It may cause forest fires by blowing flames.

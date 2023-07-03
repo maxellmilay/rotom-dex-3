@@ -1,0 +1,6 @@
+089
+Muk
+Poison
+Ground,Psychic
+Grimer,Muk
+It’s thickly covered with a filthy, vile sludge. It is so toxic, even its footprints contain poison.

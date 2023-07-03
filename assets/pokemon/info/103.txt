@@ -1,0 +1,6 @@
+103
+Exeggutor
+Grass,Psychic
+Fire,Ice,Poison,Flying,Bug,Ghost
+Exeggcute,Exeggutor
+It engages its enemies using psychic powers. Each of its three heads fires off psychokinetic energy, tripling its power.

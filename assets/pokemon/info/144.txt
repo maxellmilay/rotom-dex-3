@@ -1,0 +1,6 @@
+144
+Articuno
+Ice,Flying
+Fire,Electric,Rock,Steel
+Articuno
+Articuno is a legendary bird Pokémon that can control ice. The flapping of its wings chills the air. As a result, it is saidthat when this Pokémon flies, snow will fall.

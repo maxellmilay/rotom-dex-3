@@ -1,0 +1,6 @@
+032
+NidoranM
+Poison
+Ground,Psychic
+NidoranM,Nidorino,Nidoking
+NidoranM has developed muscles for moving its ears. Thanksto them, the ears can be freely moved in any direction. Eventhe slightest sound does not escape this Pokémon's notice.

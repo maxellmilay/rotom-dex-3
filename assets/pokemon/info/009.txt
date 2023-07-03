@@ -1,0 +1,6 @@
+008
+Blastoise
+Water
+Grass,Electric
+Squirtle,Wartortle,Blastoise
+Blastoise has water spouts that protrude from its shell. The water spouts are very accurate. They can shoot bullets ofwater with enough accuracy to strike empty cans from adistance of over 160 feet.

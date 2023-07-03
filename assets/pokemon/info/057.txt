@@ -1,0 +1,6 @@
+057
+Primeape
+Fighting
+Flying,Psychic,Fairy
+Mankey,Primeape
+It becomes wildly furious if it even senses someone looking at it. It chases anyone that meets its glare.

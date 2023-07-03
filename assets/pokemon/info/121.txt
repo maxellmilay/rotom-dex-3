@@ -1,0 +1,6 @@
+121
+Starmie
+Water,Psychic
+Grass,Electric, Bug, Ghost, Dark
+Staryu,Starmie
+Its sparkling core is called the gem of the sea. This core can be made into high-priced accessories that are traded in secret.

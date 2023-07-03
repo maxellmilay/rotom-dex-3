@@ -1,0 +1,6 @@
+088
+Grimer
+Poison
+Ground,Psychic
+Grimer,Muk
+Born from sludge, these Pokémon now gather in polluted places and increase the bacteria in their bodies.

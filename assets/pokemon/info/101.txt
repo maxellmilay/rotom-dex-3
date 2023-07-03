@@ -1,0 +1,6 @@
+101
+Electrode
+Electric
+Ground
+Voltorb,Electrode
+The more energy it charges up, the faster it gets. But this also makes it more likely to explode.

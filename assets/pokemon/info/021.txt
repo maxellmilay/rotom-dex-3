@@ -1,0 +1,6 @@
+021
+Spearow
+Normal,Flying
+Electric,Ice,Rock
+Spearow,Fearow
+Its reckless nature leads it to stand up to others—even large Pokémon—if it has to protect its territory.

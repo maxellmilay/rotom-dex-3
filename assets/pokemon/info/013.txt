@@ -1,0 +1,6 @@
+013
+Weedle
+Bug,Poison
+Fire,Flying,Psychic,Rock
+Weedle,Kakuna,Beedrill
+Weedle has an extremely acute sense of smell. It is capable ofdistinguishing its favorite kinds of leaves from those it dislikesjust by sniffing with its big red proboscis (nose).
