@@ -59,29 +59,43 @@ int main(){
 
     //selected option container
     sf::RectangleShape dropdownButton(sf::Vector2f(200, 50));
-    dropdownButton.setOrigin(dropdownButton.getGlobalBounds().width/2,dropdownButton.getGlobalBounds().height/2);
-    dropdownButton.setPosition(425, 340);
     dropdownButton.setFillColor(sf::Color::White);
     dropdownButton.setOutlineThickness(1);
     dropdownButton.setOutlineColor(sf::Color::Black);
+    dropdownButton.setOrigin(dropdownButton.getGlobalBounds().width/2,dropdownButton.getGlobalBounds().height/2);
+    dropdownButton.setPosition(525, 340);
 
     //selected option text
     sf::Text dropdownText(selectedOption, signikaNegative, 30);
-    dropdownText.setOrigin(dropdownText.getGlobalBounds().width/2,dropdownText.getGlobalBounds().height/2);
-    dropdownText.setPosition(dropdownButton.getPosition().x,dropdownButton.getPosition().y);
     dropdownText.setFillColor(sf::Color::Black);
+    dropdownText.setOrigin(dropdownText.getGlobalBounds().width/2,dropdownText.getGlobalBounds().height/2);
+    dropdownText.setPosition(dropdownButton.getPosition().x - (dropdownText.getGlobalBounds().width/2),dropdownButton.getPosition().y - (dropdownText.getGlobalBounds().height/2));
 
     //dropdown container
     sf::RectangleShape dropdownList;
     dropdownList.setFillColor(sf::Color::White);
     dropdownList.setOutlineThickness(1);
     dropdownList.setOutlineColor(sf::Color::Black);
+    dropdownList.setOrigin(dropdownList.getGlobalBounds().width/2,dropdownList.getGlobalBounds().height/2);
 
+    //search container
+    RectangleShape textContainer;
+    textContainer.setSize({300,50});
+    textContainer.setFillColor(Color::White);
+    textContainer.setOrigin(textContainer.getGlobalBounds().width/2,textContainer.getGlobalBounds().height/2);
+    textContainer.setPosition(dropdownButton.getPosition().x + (textContainer.getGlobalBounds().width/2) - (dropdownButton.getGlobalBounds().width/2),200);
+    
     //filter label text
     Text filterText("Type Filter:",signikaNegative,30);
     filterText.setFillColor(Color::White);
-    filterText.setOrigin(0,filterText.getGlobalBounds().height/2);
-    filterText.setPosition(100,dropdownText.getPosition().y);
+    filterText.setOrigin(filterText.getGlobalBounds().height/2,filterText.getGlobalBounds().height/2);
+    filterText.setPosition(200,dropdownText.getPosition().y);
+    
+    //search label text
+    Text searchText("Search:",signikaNegative,30);
+    searchText.setFillColor(Color::White);
+    searchText.setOrigin(0,searchText.getGlobalBounds().height/2);
+    searchText.setPosition(200,textContainer.getPosition().y - (searchText.getGlobalBounds().height/2));
 
     string typeNames[] = {"Fire","Normal","Grass","Water","Ground",
                         "Rock","Bug","Electric","Ice","Fighting",
@@ -92,16 +106,10 @@ int main(){
     vector<Text> dropdownOptions;
     for(int i = 0; i < typeCount; i++){
         Text optionText(typeNames[i],signikaNegative,30);
-        optionText.setFillColor(Color::Red);
+        optionText.setFillColor(Color::Black);
+        optionText.setOrigin(optionText.getGlobalBounds().width/2,optionText.getGlobalBounds().height/2);
         dropdownOptions.push_back(optionText);
     }
-
-    //SEARCH INPUT
-    RectangleShape textContainer;
-    textContainer.setSize({300,75});
-    textContainer.setFillColor(Color::White);
-    textContainer.setOrigin(textContainer.getGlobalBounds().width/2,textContainer.getGlobalBounds().height/2);
-    textContainer.setPosition(1250,200);
 
     //current pokemon displayed
     string currentPokemon;
@@ -117,11 +125,12 @@ int main(){
 
     bool isSearchEmpty = 1;
 
-    Textbox textbox(15,Color::Black,false);
+    Textbox textbox(20,Color::Black,false);
     textbox.setFont(signikaNegative);
-    textbox.setOrigin(0,textbox.getGlobalBounds().height/2);
-    textbox.setPosition({textContainer.getPosition().x - (textContainer.getGlobalBounds().width/2) + 50,textContainer.getPosition().y});
     textbox.setLimit(true,15);
+    textbox.setOrigin(0,textbox.getGlobalBounds().height/2);
+    textbox.setPosition({textContainer.getPosition().x - (textContainer.getGlobalBounds().width/2) + 50,textContainer.getPosition().y - (textbox.getGlobalBounds().height/2) - 12});
+    
 
     while(window.isOpen()){
         Event event;
@@ -335,7 +344,8 @@ int main(){
                         } else if (isDropdownOpen && dropdownList.getGlobalBounds().contains(mousePosition)) {
                             for(auto& option : dropdownOptions){
                                 if(option.getGlobalBounds().contains(mousePosition)){
-                                    selectedOption = option.getString();\
+                                    selectedOption = option.getString();
+                                    dropdownText.setString(selectedOption);
                                     if(selectedOption == "All"){
                                         isFilterActive = false;
                                     } else {
@@ -390,30 +400,10 @@ int main(){
 
         if (isDropdownOpen) {
             dropdownList.setSize(sf::Vector2f(dropdownButton.getSize().x, 580));
-            dropdownList.setPosition(dropdownButton.getPosition().x, dropdownButton.getPosition().y + dropdownButton.getSize().y);
-            // option1Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 5);
-            // option2Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 35);
-            // option3Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 65);
-            // option4Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 95);
-            // option5Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 125);
-            // option6Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 155);
-            // option7Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 185);
-            // option8Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 215);
-            // option9Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 245);
-            // option10Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 275);
-            // option11Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 305);
-            // option12Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 335);
-            // option13Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 365);
-            // option14Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 395);
-            // option15Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 425);
-            // option16Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 455);
-            // option17Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 485);
-            // option18Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 515);
-            // option19Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 545);
-
+            dropdownList.setPosition(dropdownButton.getPosition().x-(dropdownList.getGlobalBounds().width/2),dropdownButton.getPosition().y + dropdownButton.getGlobalBounds().height);
             int optionCounter = 0;
             for(auto& optionText : dropdownOptions){
-                optionText.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 5 + 30*optionCounter);
+                optionText.setPosition(dropdownButton.getPosition().x, dropdownList.getPosition().y + 10 + 30*optionCounter);
                 ++optionCounter;
             }
         }
@@ -425,6 +415,7 @@ int main(){
         } else if(activeScene == 2){
             window.draw(dropdownButton);
             window.draw(dropdownText);
+            window.draw(searchText);
             window.draw(textContainer);
             window.draw(filterText);
             textbox.drawTo(window);
