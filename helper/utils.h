@@ -160,4 +160,8 @@ bool isLastCharacterEqualTo(const std::string& str, char ch) {
     return false;
 }
 
+bool isSubstringPresent(const std::string& str, const std::string& substring) {
+    return str.find(substring) != std::string::npos;
+}
+
 #endif

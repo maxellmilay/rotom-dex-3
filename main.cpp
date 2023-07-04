@@ -4,7 +4,14 @@
 #include "./helper/utils.h"
 #include "./components/PreviewCard.h"
 #include "./components/Card.h"
+#include "./components/Textbox.h"
 #include <SFML/Audio.hpp>
+#include <string>
+#include <algorithm>
+
+#define DELETE_KEY 8
+#define ENTER_KEY 13
+#define ESCAPE_KEY 27
 
 using namespace std;
 using namespace sf;
@@ -51,19 +58,26 @@ int main(){
     bool isDropdownOpen = false;
 
     sf::RectangleShape dropdownButton(sf::Vector2f(200, 50));
+    dropdownButton.setOrigin(dropdownButton.getGlobalBounds().width/2,dropdownButton.getGlobalBounds().height/2);
     dropdownButton.setPosition(425, 340);
     dropdownButton.setFillColor(sf::Color::White);
     dropdownButton.setOutlineThickness(1);
     dropdownButton.setOutlineColor(sf::Color::Black);
 
     sf::Text dropdownText(selectedOption, signikaNegative, 30);
-    dropdownText.setPosition(430, 345);
+    dropdownText.setOrigin(dropdownText.getGlobalBounds().width/2,dropdownText.getGlobalBounds().height/2);
+    dropdownText.setPosition(dropdownButton.getPosition().x,dropdownButton.getPosition().y);
     dropdownText.setFillColor(sf::Color::Black);
 
     sf::RectangleShape dropdownList;
     dropdownList.setFillColor(sf::Color::White);
     dropdownList.setOutlineThickness(1);
     dropdownList.setOutlineColor(sf::Color::Black);
+
+    Text filterText("Type Filter:",signikaNegative,30);
+    filterText.setFillColor(Color::White);
+    filterText.setOrigin(0,filterText.getGlobalBounds().height/2);
+    filterText.setPosition(100,dropdownText.getPosition().y);
 
     //dropdown type buttons
     sf::Text option1Text("Fire", signikaNegative, 30);
@@ -109,17 +123,8 @@ int main(){
     RectangleShape textContainer;
     textContainer.setSize({300,75});
     textContainer.setFillColor(Color::White);
+    textContainer.setOrigin(textContainer.getGlobalBounds().width/2,textContainer.getGlobalBounds().height/2);
     textContainer.setPosition(1250,200);
-
-    Text inputText;
-    inputText.setString("");
-    inputText.setFillColor(Color::Black);
-    inputText.setFont(signikaNegative);
-    inputText.setCharacterSize(25);
-    inputText.setOrigin(0,inputText.getGlobalBounds().height/2);
-    inputText.setPosition(textContainer.getPosition().x + 50, textContainer.getPosition().y + textContainer.getGlobalBounds().height/2);
-
-    //SEARCH INPUT
 
     //current pokemon displayed
     string currentPokemon;
@@ -130,9 +135,16 @@ int main(){
     //indicator if a type filter from dropdown is selected
     bool isFilterActive = false;
 
+    //vertical scroll counter
     int scrollCount = 0;
 
-    bool isSearchActive = false;
+    bool isSearchEmpty = 1;
+
+    Textbox textbox(15,Color::Black,false);
+    textbox.setFont(signikaNegative);
+    textbox.setOrigin(0,textbox.getGlobalBounds().height/2);
+    textbox.setPosition({textContainer.getPosition().x - (textContainer.getGlobalBounds().width/2) + 50,textContainer.getPosition().y});
+    textbox.setLimit(true,15);
 
     while(window.isOpen()){
         Event event;
@@ -140,6 +152,16 @@ int main(){
         
         if(activeScene == 1 || activeScene == 3){
             currentView.setCenter(window.getSize().x / 2, window.getSize().y / 2);
+        }
+
+        if(selectedOption == "All"){
+            isFilterActive = false;
+        }
+
+        if(textbox.getText() == ""){
+            isSearchEmpty = true;
+        } else {
+            isSearchEmpty = false;
         }
 
         currentView.setSize(window.getSize().x, window.getSize().y);
@@ -150,21 +172,46 @@ int main(){
 
         //filter pokemon per type
         if(isFilterActive){  
-            for (int i = 0; i < pokemonCount; ++i) {
-                if (createSubstring(pokemonList[i][2],',') == selectedOption) { 
-                    filteredPokemonList[filteredCount] = new string[POKEMON_INFO_COUNT];
-                    for (int j = 0; j < POKEMON_INFO_COUNT; ++j) {
-                        filteredPokemonList[filteredCount][j] = pokemonList[i][j];
+            if(isSearchEmpty){
+                for (int i = 0; i < pokemonCount; ++i) {
+                    if (createSubstring(pokemonList[i][2],',') == selectedOption) { 
+                        filteredPokemonList[filteredCount] = new string[POKEMON_INFO_COUNT];
+                        for (int j = 0; j < POKEMON_INFO_COUNT; ++j) {
+                            filteredPokemonList[filteredCount][j] = pokemonList[i][j];
+                        }
+                        filteredCount++;
                     }
-                    filteredCount++;
+                }
+            } else {
+                for (int i = 0; i < pokemonCount; ++i) {
+                    if (createSubstring(pokemonList[i][2],',') == selectedOption) { 
+                        filteredPokemonList[filteredCount] = new string[POKEMON_INFO_COUNT];
+                        if(isSubstringPresent(toLowercase(pokemonList[i][1]),textbox.getText())){
+                            for (int j = 0; j < POKEMON_INFO_COUNT; ++j) {
+                                filteredPokemonList[filteredCount][j] = pokemonList[i][j];
+                            }
+                            filteredCount++;
+                        }
+                    }
                 }
             }
-
             numRows = (filteredCount + 3) / 4;
             numCols = 4;
         } else {
-            numRows = (pokemonCount + 3) / 4;
-            numCols = 4;
+            if(isSearchEmpty){
+                numRows = (pokemonCount + 3) / 4;
+                numCols = 4;
+            } else {
+                for (int i = 0; i < pokemonCount; ++i) {
+                    if (isSubstringPresent(toLowercase(pokemonList[i][1]),textbox.getText())) { 
+                        filteredPokemonList[filteredCount] = new string[POKEMON_INFO_COUNT];
+                            for (int j = 0; j < POKEMON_INFO_COUNT; ++j) {
+                                filteredPokemonList[filteredCount][j] = pokemonList[i][j];
+                            }
+                            filteredCount++;
+                    }
+                }
+            }
         }
 
         PreviewCard** PreviewCardList = new PreviewCard*[numRows];
@@ -186,16 +233,30 @@ int main(){
                         listCounter++;
                     }
                 } else {
-                    if (listCounter < pokemonCount) {
-                        string name = pokemonList[listCounter][1];
-                        string number = pokemonList[listCounter][0];
-                        string type = createSubstring(pokemonList[listCounter][2],',');
+                    if(isSearchEmpty){
+                        if (listCounter < pokemonCount) {
+                            string name = pokemonList[listCounter][1];
+                            string number = pokemonList[listCounter][0];
+                            string type = createSubstring(pokemonList[listCounter][2],',');
 
-                        PreviewCard pcard(name,number,type,signikaNegative);
-                        pcard.setPosition(i,j);
+                            PreviewCard pcard(name,number,type,signikaNegative);
+                            pcard.setPosition(i,j);
 
-                        PreviewCardList[i][j] = pcard;
-                        listCounter++;
+                            PreviewCardList[i][j] = pcard;
+                            listCounter++;
+                        }
+                    } else {
+                        if (listCounter < filteredCount) {
+                            string name = filteredPokemonList[listCounter][1];
+                            string number = filteredPokemonList[listCounter][0];
+                            string type = filteredPokemonList[listCounter][2];
+
+                            PreviewCard pcard(name, number, type, signikaNegative);
+                            pcard.setPosition(i, j);
+
+                            PreviewCardList[i][j] = pcard;
+                            listCounter++;
+                        }
                     }
                 }
             }
@@ -243,7 +304,7 @@ int main(){
 
                 // Evolution
                 std::vector<std::string> evoVec;
-                std::istringstream issEvo(pokemonList[i][4]); // Assuming evolution data is at index 4
+                std::istringstream issEvo(pokemonList[i][4]);
                 std::string evoToken;
 
                 while (std::getline(issEvo, evoToken, ',')) {
@@ -281,16 +342,14 @@ int main(){
                     else if(activeScene == 2){
                         //search bar clicks
                         if(textContainer.getGlobalBounds().contains(mousePosition)){
-                            isSearchActive = true;
-                            if(!isLastCharacterEqualTo(inputText.getString(),'_')){
-                                inputText.setString(inputText.getString()+"_");
-                            }
+                            textbox.setSelected(true);
                         } else {
-                            isSearchActive = false;
-                            string currentString = inputText.getString();
-                            if(isLastCharacterEqualTo(currentString,'_')){
-                                inputText.setString(currentString.erase(currentString.size()-1));
-                            }
+                            textbox.setSelected(false);
+                        }
+
+                        //keyboard clicks
+                        if(Keyboard::isKeyPressed(Keyboard::Return)){
+
                         }
 
                         //dropdown clicks
@@ -432,7 +491,9 @@ int main(){
                     }
                     window.setView(view);
                 }
-            } else if (event.type == Event::Key)
+            } else if (event.type == Event::TextEntered){
+                    textbox.typedOn(event);
+            }
         }
 
         if (isDropdownOpen) {
@@ -467,7 +528,8 @@ int main(){
             window.draw(dropdownButton);
             window.draw(dropdownText);
             window.draw(textContainer);
-            window.draw(inputText);
+            window.draw(filterText);
+            textbox.drawTo(window);
             
             for(int i = 0; i < numRows; i++){
                 for(int j = 0; j < numCols; j++){
@@ -504,7 +566,6 @@ int main(){
                 }
             }
         }
-        window.display();
-
+        window.display();    
     }
 }
