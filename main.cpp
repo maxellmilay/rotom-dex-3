@@ -57,6 +57,7 @@ int main(){
     std::string selectedOption = "All";
     bool isDropdownOpen = false;
 
+    //selected option container
     sf::RectangleShape dropdownButton(sf::Vector2f(200, 50));
     dropdownButton.setOrigin(dropdownButton.getGlobalBounds().width/2,dropdownButton.getGlobalBounds().height/2);
     dropdownButton.setPosition(425, 340);
@@ -64,60 +65,36 @@ int main(){
     dropdownButton.setOutlineThickness(1);
     dropdownButton.setOutlineColor(sf::Color::Black);
 
+    //selected option text
     sf::Text dropdownText(selectedOption, signikaNegative, 30);
     dropdownText.setOrigin(dropdownText.getGlobalBounds().width/2,dropdownText.getGlobalBounds().height/2);
     dropdownText.setPosition(dropdownButton.getPosition().x,dropdownButton.getPosition().y);
     dropdownText.setFillColor(sf::Color::Black);
 
+    //dropdown container
     sf::RectangleShape dropdownList;
     dropdownList.setFillColor(sf::Color::White);
     dropdownList.setOutlineThickness(1);
     dropdownList.setOutlineColor(sf::Color::Black);
 
+    //filter label text
     Text filterText("Type Filter:",signikaNegative,30);
     filterText.setFillColor(Color::White);
     filterText.setOrigin(0,filterText.getGlobalBounds().height/2);
     filterText.setPosition(100,dropdownText.getPosition().y);
 
-    //dropdown type buttons
-    sf::Text option1Text("Fire", signikaNegative, 30);
-    option1Text.setFillColor(sf::Color::Black);
-    sf::Text option2Text("Normal", signikaNegative, 30);
-    option2Text.setFillColor(sf::Color::Black);
-    sf::Text option3Text("Grass", signikaNegative, 30);
-    option3Text.setFillColor(sf::Color::Black);
-    sf::Text option4Text("Water", signikaNegative, 30);
-    option4Text.setFillColor(sf::Color::Black);
-    sf::Text option5Text("Ground", signikaNegative, 30);
-    option5Text.setFillColor(sf::Color::Black);
-    sf::Text option6Text("Rock", signikaNegative, 30);
-    option6Text.setFillColor(sf::Color::Black);
-    sf::Text option7Text("Bug", signikaNegative, 30);
-    option7Text.setFillColor(sf::Color::Black);
-    sf::Text option8Text("Electric", signikaNegative, 30);
-    option8Text.setFillColor(sf::Color::Black);
-    sf::Text option9Text("Ice", signikaNegative, 30);
-    option9Text.setFillColor(sf::Color::Black);
-    sf::Text option10Text("Fighting", signikaNegative, 30);
-    option10Text.setFillColor(sf::Color::Black);
-    sf::Text option11Text("Poison", signikaNegative, 30);
-    option11Text.setFillColor(sf::Color::Black);
-    sf::Text option12Text("Flying", signikaNegative, 30);
-    option12Text.setFillColor(sf::Color::Black);
-    sf::Text option13Text("Psychic", signikaNegative, 30);
-    option13Text.setFillColor(sf::Color::Black);
-    sf::Text option14Text("Dark", signikaNegative, 30);
-    option14Text.setFillColor(sf::Color::Black);
-    sf::Text option15Text("Dragon", signikaNegative, 30);
-    option15Text.setFillColor(sf::Color::Black);
-    sf::Text option16Text("Ghost", signikaNegative, 30);
-    option16Text.setFillColor(sf::Color::Black);
-    sf::Text option17Text("Steel", signikaNegative, 30);
-    option17Text.setFillColor(sf::Color::Black);
-    sf::Text option18Text("Fairy", signikaNegative, 30);
-    option18Text.setFillColor(sf::Color::Black);
-    sf::Text option19Text("All", signikaNegative, 30);
-    option19Text.setFillColor(sf::Color::Black);
+    string typeNames[] = {"Fire","Normal","Grass","Water","Ground",
+                        "Rock","Bug","Electric","Ice","Fighting",
+                        "Poison","Flying","Psychic","Dark","Dragon",
+                        "Ghost","Steel","Fairy","All"};
+    int typeCount = sizeof(typeNames)/sizeof(typeNames[0]);
+
+    vector<Text> dropdownOptions;
+    for(int i = 0; i < typeCount; i++){
+        Text optionText(typeNames[i],signikaNegative,30);
+        optionText.setFillColor(Color::Red);
+        dropdownOptions.push_back(optionText);
+    }
 
     //SEARCH INPUT
     RectangleShape textContainer;
@@ -356,100 +333,15 @@ int main(){
                         if (dropdownButton.getGlobalBounds().contains(mousePosition)) {
                         isDropdownOpen = !isDropdownOpen;
                         } else if (isDropdownOpen && dropdownList.getGlobalBounds().contains(mousePosition)) {
-                            if (option1Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Fire";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option2Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Normal";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option3Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Grass";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option4Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Water";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option5Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Ground";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option6Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Rock";
-                                isFilterActive = true;
-                        
-                                dropdownText.setString(selectedOption);
-                            } else if (option7Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Bug";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option8Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Electric";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option9Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Ice";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option10Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Fighting";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option11Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Poison";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option12Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Flying";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option13Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Psychic";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option14Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Dark";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option15Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Dragon";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option16Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Ghost";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option17Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Steel";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option18Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "Fairy";
-                                isFilterActive = true;
-                            
-                                dropdownText.setString(selectedOption);
-                            } else if (option19Text.getGlobalBounds().contains(mousePosition)) {
-                                selectedOption = "All";
-                                dropdownText.setString(selectedOption);
-                                isFilterActive = false;
+                            for(auto& option : dropdownOptions){
+                                if(option.getGlobalBounds().contains(mousePosition)){
+                                    selectedOption = option.getString();\
+                                    if(selectedOption == "All"){
+                                        isFilterActive = false;
+                                    } else {
+                                        isFilterActive = true;
+                                    }
+                                }
                             }
                             isDropdownOpen = false;
                         } else {
@@ -482,12 +374,12 @@ int main(){
                 if(activeScene == 2){
                     if (event.mouseWheelScroll.delta > 0){
                         if (view.getCenter().y - view.getSize().y / 2 > scrollLimitTop)
-                            view.move(0, -100);
-                            scrollCount -= 100;
+                            view.move(0, -150);
+                            scrollCount -= 150;
                     } else {
                         if (view.getCenter().y + view.getSize().y / 2 < scrollLimitBottom)
-                            view.move(0, 100);
-                            scrollCount += 100;
+                            view.move(0, 150);
+                            scrollCount += 150;
                     }
                     window.setView(view);
                 }
@@ -499,25 +391,31 @@ int main(){
         if (isDropdownOpen) {
             dropdownList.setSize(sf::Vector2f(dropdownButton.getSize().x, 580));
             dropdownList.setPosition(dropdownButton.getPosition().x, dropdownButton.getPosition().y + dropdownButton.getSize().y);
-            option1Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 5);
-            option2Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 35);
-            option3Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 65);
-            option4Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 95);
-            option5Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 125);
-            option6Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 155);
-            option7Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 185);
-            option8Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 215);
-            option9Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 245);
-            option10Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 275);
-            option11Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 305);
-            option12Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 335);
-            option13Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 365);
-            option14Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 395);
-            option15Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 425);
-            option16Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 455);
-            option17Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 485);
-            option18Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 515);
-            option19Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 545);
+            // option1Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 5);
+            // option2Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 35);
+            // option3Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 65);
+            // option4Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 95);
+            // option5Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 125);
+            // option6Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 155);
+            // option7Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 185);
+            // option8Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 215);
+            // option9Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 245);
+            // option10Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 275);
+            // option11Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 305);
+            // option12Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 335);
+            // option13Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 365);
+            // option14Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 395);
+            // option15Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 425);
+            // option16Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 455);
+            // option17Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 485);
+            // option18Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 515);
+            // option19Text.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 545);
+
+            int optionCounter = 0;
+            for(auto& optionText : dropdownOptions){
+                optionText.setPosition(dropdownList.getPosition().x + 5, dropdownList.getPosition().y + 5 + 30*optionCounter);
+                ++optionCounter;
+            }
         }
 
         window.clear();
@@ -539,25 +437,9 @@ int main(){
 
             if (isDropdownOpen) {
                 window.draw(dropdownList);
-                window.draw(option1Text);
-                window.draw(option2Text);
-                window.draw(option3Text);
-                window.draw(option4Text);
-                window.draw(option5Text);
-                window.draw(option6Text);
-                window.draw(option7Text);
-                window.draw(option8Text);
-                window.draw(option9Text);
-                window.draw(option10Text);
-                window.draw(option11Text);
-                window.draw(option12Text);
-                window.draw(option13Text);
-                window.draw(option14Text);
-                window.draw(option15Text);
-                window.draw(option16Text);
-                window.draw(option17Text);
-                window.draw(option18Text);
-                window.draw(option19Text);
+                for(auto& option : dropdownOptions){
+                    window.draw(option);
+                }   
             }
         } else if (activeScene == 3){
             for(int i = 0; i < pokemonCount; i++){
@@ -566,6 +448,8 @@ int main(){
                 }
             }
         }
-        window.display();    
+        window.display();
+        
+
     }
 }
