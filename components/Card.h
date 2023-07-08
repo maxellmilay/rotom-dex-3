@@ -1,4 +1,5 @@
 #include <SFML/Graphics.hpp>
+#include <SFML/Audio.hpp>
 #include <string.h>
 #include <vector>
 #include "../helper/utils.h"
@@ -52,6 +53,9 @@ class Card {
                 bg.loadFromFile("./assets/pokemon/bg/" + types[0] + ".png");
                 bgSprite.setTexture(bg);
             }
+
+            buffer.loadFromFile("./assets/pokemon/cries/" + this->name + ".wav");
+            sound.setBuffer(this->buffer);
 
             //background images properties
             backButtonSprite.setPosition({LEFT_MARGIN,100});
@@ -194,6 +198,21 @@ class Card {
             return backButtonSprite;
         }
 
+        Sprite getBgSprite(){
+            return bgSprite;
+        }
+
+        void play(){
+            sound.play();
+            while (sound.getStatus() == sf::Sound::Playing)
+            {
+                // Keep the program running until the sound has finished playing
+            }
+        }
+
+        string getNumber(){
+            return this->number;
+        }
     private:
         string name;
         string number;
@@ -231,6 +250,10 @@ class Card {
         Text numberText;
         Text typeText;
         Text weaknessText;
+
+        //sound
+        SoundBuffer buffer;
+        Sound sound;
 
 };
         

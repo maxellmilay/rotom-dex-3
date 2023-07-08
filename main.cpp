@@ -35,10 +35,19 @@ int main(){
     loadingDex.setOrigin(spriteBounds.width / 2, spriteBounds.height / 2);
     loadingDex.setPosition(window.getSize().x / 2, window.getSize().y / 2);
 
-    Font signikaNegative;
-    signikaNegative.loadFromFile("./assets/fonts/SignikaNegative.ttf");
+    Font bPreplay;
+    bPreplay.loadFromFile("./assets/fonts/BPreplay.otf");
     string path = "./assets/pokemon/info";
+
     int pokemonCount = countPokemon(path);
+
+    //play background music
+    SoundBuffer themeBuffer;
+    themeBuffer.loadFromFile("./assets/music/theme.wav");
+    Sound themeSound;
+    themeSound.setBuffer(themeBuffer);
+    themeSound.setVolume(1);
+    themeSound.play();
 
     //create a pokemon list pointer array
     string** pokemonList = new string*[pokemonCount];
@@ -66,7 +75,7 @@ int main(){
     dropdownButton.setPosition(525, 340);
 
     //selected option text
-    sf::Text dropdownText(selectedOption, signikaNegative, 30);
+    sf::Text dropdownText(selectedOption, bPreplay, 30);
     dropdownText.setFillColor(sf::Color::Black);
     dropdownText.setOrigin(dropdownText.getGlobalBounds().width/2,dropdownText.getGlobalBounds().height/2);
     dropdownText.setPosition(dropdownButton.getPosition().x - (dropdownText.getGlobalBounds().width/2),dropdownButton.getPosition().y - (dropdownText.getGlobalBounds().height/2));
@@ -86,13 +95,13 @@ int main(){
     textContainer.setPosition(dropdownButton.getPosition().x + (textContainer.getGlobalBounds().width/2) - (dropdownButton.getGlobalBounds().width/2),200);
     
     //filter label text
-    Text filterText("Type Filter:",signikaNegative,30);
+    Text filterText("Type Filter:",bPreplay,30);
     filterText.setFillColor(Color::White);
     filterText.setOrigin(filterText.getGlobalBounds().height/2,filterText.getGlobalBounds().height/2);
     filterText.setPosition(200,dropdownText.getPosition().y);
     
     //search label text
-    Text searchText("Search:",signikaNegative,30);
+    Text searchText("Search:",bPreplay,30);
     searchText.setFillColor(Color::White);
     searchText.setOrigin(0,searchText.getGlobalBounds().height/2);
     searchText.setPosition(200,textContainer.getPosition().y - (searchText.getGlobalBounds().height/2));
@@ -105,7 +114,7 @@ int main(){
 
     vector<Text> dropdownOptions;
     for(int i = 0; i < typeCount; i++){
-        Text optionText(typeNames[i],signikaNegative,30);
+        Text optionText(typeNames[i],bPreplay,30);
         optionText.setFillColor(Color::Black);
         optionText.setOrigin(optionText.getGlobalBounds().width/2,optionText.getGlobalBounds().height/2);
         dropdownOptions.push_back(optionText);
@@ -126,12 +135,12 @@ int main(){
     bool isSearchEmpty = 1;
 
     Textbox textbox(20,Color::Black,false);
-    textbox.setFont(signikaNegative);
+    textbox.setFont(bPreplay);
     textbox.setLimit(true,15);
     textbox.setOrigin(0,textbox.getGlobalBounds().height/2);
     textbox.setPosition({textContainer.getPosition().x - (textContainer.getGlobalBounds().width/2) + 50,textContainer.getPosition().y - (textbox.getGlobalBounds().height/2) - 12});
     
-
+    
     while(window.isOpen()){
         Event event;
         View currentView = window.getView();
@@ -212,7 +221,7 @@ int main(){
                         string number = filteredPokemonList[listCounter][0];
                         string type = filteredPokemonList[listCounter][2];
 
-                        PreviewCard pcard(name, number, type, signikaNegative);
+                        PreviewCard pcard(name, number, type, bPreplay);
                         pcard.setPosition(i, j);
 
                         PreviewCardList[i][j] = pcard;
@@ -225,7 +234,7 @@ int main(){
                             string number = pokemonList[listCounter][0];
                             string type = createSubstring(pokemonList[listCounter][2],',');
 
-                            PreviewCard pcard(name,number,type,signikaNegative);
+                            PreviewCard pcard(name,number,type,bPreplay);
                             pcard.setPosition(i,j);
 
                             PreviewCardList[i][j] = pcard;
@@ -237,7 +246,7 @@ int main(){
                             string number = filteredPokemonList[listCounter][0];
                             string type = filteredPokemonList[listCounter][2];
 
-                            PreviewCard pcard(name, number, type, signikaNegative);
+                            PreviewCard pcard(name, number, type, bPreplay);
                             pcard.setPosition(i, j);
 
                             PreviewCardList[i][j] = pcard;
@@ -307,7 +316,7 @@ int main(){
             }
         }
 
-        Card currentCard(Name, number, types, weaknesses, description, evolution, signikaNegative);
+        Card currentCard(Name, number, types, weaknesses, description, evolution, bPreplay);
     
         while(window.pollEvent(event)){
             if(event.type==Event::Closed){
@@ -376,6 +385,10 @@ int main(){
                             currentView.setCenter(window.getSize().x / 2, (window.getSize().y / 2) + scrollCount);
                             window.setView(view);
                             scrollCount = 0;
+                        }
+
+                        if(currentCard.getBgSprite().getGlobalBounds().contains(mousePosition)){
+                            currentCard.play();
                         }
                     }
                 }

@@ -1,6 +1,6 @@
 014
 Kakuna
-Bug, Poison
+Bug,Poison
 Fire,Flying,Psychic,Rock
 Weedle,Kakuna,Beedrill
 Kakuna remains virtually immobile as it clings to a tree. However, on the inside, it is extremely busy as it prepares forits coming evolution. This is evident from how hot the shellbecomes to the touch.
